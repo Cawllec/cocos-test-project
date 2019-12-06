@@ -47,6 +47,7 @@ static AppDelegate s_sharedApplication;
     BugsnagConfiguration *config = [BugsnagConfiguration new];
     config.apiKey = @"BUGSNAG_API_KEY";
     config.shouldAutoCaptureSessions = YES;
+    config.reportOOMs = true;
     // [config setEndpointsForNotify:@"http://192.168.3.6:62000" sessions:@"http://192.168.3.6:62000"];
     [Bugsnag startBugsnagWithConfiguration:config];
     

@@ -130,10 +130,7 @@ bool CrashyScene::init()
             this->startSession();
         } else if (triggerANRItem->getBoundingBox().containsPoint(touch->getLocation())) {
             CCLOG("Doing a ANR");
-            while (true)
-            {
-                CCLOG("Waiting for ANR");
-            }
+            this->triggerANR();
         }
         return false;
     };
@@ -195,4 +192,19 @@ void CrashyScene::startSession()
 void CrashyScene::resumeSession()
 {
     bugsnag::Bugsnag::resumeSession();
+}
+
+void CrashyScene::triggerANR()
+{
+    while (true) {}
+}
+
+void CrashyScene::triggerOOM()
+{
+    std::string inString("1234567890abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ");
+    std::string outString("");
+    while (true)
+    {
+        outString += outString + inString;
+    }
 }

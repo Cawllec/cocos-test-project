@@ -61,6 +61,10 @@ public:
     // Starts a new session
     void startSession();
 
+    void triggerOOM();
+
+    void triggerANR();
+
     // implement the "static create()" method manually
     CREATE_FUNC(CrashyScene);
 };
