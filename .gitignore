@@ -69,7 +69,6 @@ cocos2d/cocos/platform/android/java/local.properties
 cocos2d/cocos/platform/android/java/res/
 .metadata/
 .recommenders/
-
 # proj.android-studio
 .idea/
 *.iml
