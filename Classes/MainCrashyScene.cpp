@@ -80,9 +80,29 @@ bool CrashyScene::init()
     y -= visibleSize.height/12;
     userItem->setPosition(Vec2(x,y));
     this->addChild(userItem);
+    
+    auto pauseSessionItem = Sprite::create("PauseSession.png");
+    y -= visibleSize.height/12;
+    pauseSessionItem->setPosition(Vec2(x,y));
+    this->addChild(pauseSessionItem);
+    
+    auto resumeSessionItem = Sprite::create("ResumeSession.png");
+    y -= visibleSize.height/12;
+    resumeSessionItem->setPosition(Vec2(x,y));
+    this->addChild(resumeSessionItem);
+    
+    auto startSessionItem = Sprite::create("StartSession.png");
+    y -= visibleSize.height/12;
+    startSessionItem->setPosition(Vec2(x,y));
+    this->addChild(startSessionItem);
+
+    auto triggerANRItem = Sprite::create("TriggerANR.png");
+    y -= visibleSize.height/12;
+    triggerANRItem->setPosition(Vec2(x,y));
+    this->addChild(triggerANRItem);
 
     auto eventListener = EventListenerTouchOneByOne::create();
-    eventListener->onTouchBegan = [this, crashItem, notifyItem, diagnosticsItem, breadcrumbItem, userItem](Touch* touch, Event* event)
+    eventListener->onTouchBegan = [this, crashItem, notifyItem, diagnosticsItem, breadcrumbItem, userItem, pauseSessionItem, startSessionItem, resumeSessionItem, triggerANRItem](Touch* touch, Event* event)
     {
         if (crashItem->getBoundingBox().containsPoint(touch->getLocation())) {
             CCLOG("Doing a crash");
@@ -99,6 +119,21 @@ bool CrashyScene::init()
         } else if (userItem->getBoundingBox().containsPoint(touch->getLocation())) {
             CCLOG("Doing a user");
             this->createUser();
+        } else if (pauseSessionItem->getBoundingBox().containsPoint(touch->getLocation())) {
+            CCLOG("Doing a pauseSession");
+            this->pauseSession();
+        } else if (resumeSessionItem->getBoundingBox().containsPoint(touch->getLocation())) {
+            CCLOG("Doing a resumeSession");
+            this->resumeSession();
+        } else if (startSessionItem->getBoundingBox().containsPoint(touch->getLocation())) {
+            CCLOG("Doing a startSession");
+            this->startSession();
+        } else if (triggerANRItem->getBoundingBox().containsPoint(touch->getLocation())) {
+            CCLOG("Doing a ANR");
+            while (true)
+            {
+                CCLOG("Waiting for ANR");
+            }
         }
         return false;
     };
@@ -145,4 +180,19 @@ void CrashyScene::attachManualBreadcrumb()
 void CrashyScene::createUser()
 {
     bugsnag::Bugsnag::setUser("User_id", "User@Usernet.net", "Anonymoose");
+}
+
+void CrashyScene::pauseSession()
+{
+    bugsnag::Bugsnag::pauseSession();
+}
+
+void CrashyScene::startSession()
+{
+    bugsnag::Bugsnag::startSession();
+}
+
+void CrashyScene::resumeSession()
+{
+    bugsnag::Bugsnag::resumeSession();
 }

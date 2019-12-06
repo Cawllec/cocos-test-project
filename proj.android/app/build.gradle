@@ -34,15 +34,14 @@ android {
             else if (PROP_BUILD_TYPE == 'cmake') {
                 cmake {
                     targets 'MyGame'
-                    arguments "-DCMAKE_FIND_ROOT_PATH=", "-DANDROID_STL=c++_static", "-DANDROID_TOOLCHAIN=clang", "-DANDROID_ARM_NEON=TRUE"
+                    arguments "-DCMAKE_FIND_ROOT_PATH=", "-DANDROID_STL=c++_shared", "-DANDROID_TOOLCHAIN=clang", "-DANDROID_ARM_NEON=TRUE"
                     cppFlags "-frtti -fexceptions -fsigned-char"
                 }
             }
         }
 
         ndk {
-            abiFilters = []
-            abiFilters.addAll(PROP_APP_ABI.split(':').collect{it as String})
+            abiFilters = ["arm64-v8a"]
         }
     }
 

@@ -59,6 +59,12 @@
 		A107D4652399673500B5C090 /* Breadcrumb.png in Resources */ = {isa = PBXBuildFile; fileRef = A107D4602399673400B5C090 /* Breadcrumb.png */; };
 		A107D4662399673500B5C090 /* Diagnostics.png in Resources */ = {isa = PBXBuildFile; fileRef = A107D4612399673500B5C090 /* Diagnostics.png */; };
 		A107D4672399673500B5C090 /* Diagnostics.png in Resources */ = {isa = PBXBuildFile; fileRef = A107D4612399673500B5C090 /* Diagnostics.png */; };
+		A107D46C239A92EF00B5C090 /* ResumeSession.png in Resources */ = {isa = PBXBuildFile; fileRef = A107D469239A92EF00B5C090 /* ResumeSession.png */; };
+		A107D46D239A92EF00B5C090 /* StartSession.png in Resources */ = {isa = PBXBuildFile; fileRef = A107D46A239A92EF00B5C090 /* StartSession.png */; };
+		A107D46E239A92EF00B5C090 /* PauseSession.png in Resources */ = {isa = PBXBuildFile; fileRef = A107D46B239A92EF00B5C090 /* PauseSession.png */; };
+		A107D46F239A97C900B5C090 /* PauseSession.png in Resources */ = {isa = PBXBuildFile; fileRef = A107D46B239A92EF00B5C090 /* PauseSession.png */; };
+		A107D470239A97C900B5C090 /* ResumeSession.png in Resources */ = {isa = PBXBuildFile; fileRef = A107D469239A92EF00B5C090 /* ResumeSession.png */; };
+		A107D471239A97C900B5C090 /* StartSession.png in Resources */ = {isa = PBXBuildFile; fileRef = A107D46A239A92EF00B5C090 /* StartSession.png */; };
 		BF171245129291EC00B8313A /* OpenGLES.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BF170DB012928DE900B8313A /* OpenGLES.framework */; };
 		BF1712471292920000B8313A /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = BF170DB412928DE900B8313A /* libz.dylib */; };
 		BF1C47F01293687400B63C5D /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BF1C47EA1293683800B63C5D /* QuartzCore.framework */; };
@@ -154,6 +160,9 @@
 		A107D45F2399673400B5C090 /* User.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = User.png; sourceTree = "<group>"; };
 		A107D4602399673400B5C090 /* Breadcrumb.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Breadcrumb.png; sourceTree = "<group>"; };
 		A107D4612399673500B5C090 /* Diagnostics.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Diagnostics.png; sourceTree = "<group>"; };
+		A107D469239A92EF00B5C090 /* ResumeSession.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ResumeSession.png; sourceTree = "<group>"; };
+		A107D46A239A92EF00B5C090 /* StartSession.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = StartSession.png; sourceTree = "<group>"; };
+		A107D46B239A92EF00B5C090 /* PauseSession.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = PauseSession.png; sourceTree = "<group>"; };
 		BF170DB012928DE900B8313A /* OpenGLES.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGLES.framework; path = System/Library/Frameworks/OpenGLES.framework; sourceTree = SDKROOT; };
 		BF170DB412928DE900B8313A /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
 		BF1C47EA1293683800B63C5D /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
@@ -294,6 +303,9 @@
 		46880B7519C43A67006E1F66 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				A107D46B239A92EF00B5C090 /* PauseSession.png */,
+				A107D469239A92EF00B5C090 /* ResumeSession.png */,
+				A107D46A239A92EF00B5C090 /* StartSession.png */,
 				A107D4602399673400B5C090 /* Breadcrumb.png */,
 				A107D4612399673500B5C090 /* Diagnostics.png */,
 				A107D45F2399673400B5C090 /* User.png */,
@@ -387,6 +399,11 @@
 			isa = PBXProject;
 			attributes = {
 				LastUpgradeCheck = 0500;
+				TargetAttributes = {
+					1D6058900D05DD3D006BFB54 = {
+						DevelopmentTeam = 372ZUL2ZB7;
+					};
+				};
 			};
 			buildConfigurationList = C01FCF4E08A954540054247B /* Build configuration list for PBXProject "parky2" */;
 			compatibilityVersion = "Xcode 3.2";
@@ -445,9 +462,11 @@
 			files = (
 				46880B8119C43A67006E1F66 /* HelloWorld.png in Resources */,
 				1A88B2641FC3D9C9005C14AE /* Images.xcassets in Resources */,
+				A107D46E239A92EF00B5C090 /* PauseSession.png in Resources */,
 				46880B7D19C43A67006E1F66 /* CloseSelected.png in Resources */,
 				A107D44A239914D300B5C090 /* bugsnag in Resources */,
 				A107D4662399673500B5C090 /* Diagnostics.png in Resources */,
+				A107D46D239A92EF00B5C090 /* StartSession.png in Resources */,
 				521A8EA919F11F5000D177D7 /* fonts in Resources */,
 				3EACC98F19EE6D4300EB3C5E /* res in Resources */,
 				A107D4622399673500B5C090 /* User.png in Resources */,
@@ -457,6 +476,7 @@
 				1AF87B881F6F781D007BE51C /* LaunchScreen.storyboard in Resources */,
 				A107D45D2399659000B5C090 /* Notify.png in Resources */,
 				A107D45A2399529900B5C090 /* Crash.png in Resources */,
+				A107D46C239A92EF00B5C090 /* ResumeSession.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -467,12 +487,15 @@
 				A107D4652399673500B5C090 /* Breadcrumb.png in Resources */,
 				A107D4632399673500B5C090 /* User.png in Resources */,
 				46880B8219C43A67006E1F66 /* HelloWorld.png in Resources */,
+				A107D471239A97C900B5C090 /* StartSession.png in Resources */,
 				A107D45B2399529900B5C090 /* Crash.png in Resources */,
 				503AE0F817EB97AB00D1A890 /* Icon.icns in Resources */,
 				A107D4672399673500B5C090 /* Diagnostics.png in Resources */,
 				3EACC99019EE6D4300EB3C5E /* res in Resources */,
+				A107D470239A97C900B5C090 /* ResumeSession.png in Resources */,
 				521A8EAA19F11F5000D177D7 /* fonts in Resources */,
 				46880B7C19C43A67006E1F66 /* CloseNormal.png in Resources */,
+				A107D46F239A97C900B5C090 /* PauseSession.png in Resources */,
 				A107D45E2399659000B5C090 /* Notify.png in Resources */,
 				46880B7E19C43A67006E1F66 /* CloseSelected.png in Resources */,
 			);
@@ -526,6 +549,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				COMPRESS_PNG_FILES = NO;
+				DEVELOPMENT_TEAM = 372ZUL2ZB7;
 				ENABLE_BITCODE = NO;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
@@ -543,7 +567,10 @@
 				);
 				INFOPLIST_FILE = ios/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
-				LIBRARY_SEARCH_PATHS = "$(SRCROOT)/../bugsnag/cocoa";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(SRCROOT)/../bugsnag/cocoa",
+				);
 				OTHER_LDFLAGS = (
 					"$(_COCOS_LIB_IOS_BEGIN)",
 					"$(_COCOS_LIB_IOS_END)",
@@ -563,6 +590,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				COMPRESS_PNG_FILES = NO;
+				DEVELOPMENT_TEAM = 372ZUL2ZB7;
 				ENABLE_BITCODE = NO;
 				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
@@ -579,7 +607,10 @@
 				);
 				INFOPLIST_FILE = ios/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
-				LIBRARY_SEARCH_PATHS = "$(SRCROOT)/../bugsnag/cocoa";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(SRCROOT)/../bugsnag/cocoa",
+				);
 				OTHER_LDFLAGS = (
 					"$(_COCOS_LIB_IOS_BEGIN)",
 					"$(_COCOS_LIB_IOS_END)",

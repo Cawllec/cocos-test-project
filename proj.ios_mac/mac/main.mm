@@ -33,7 +33,11 @@ USING_NS_CC;
 int main(int argc, char *argv[])
 {
     [BugsnagCocos2dxPlugin registerWithCocos2dVersion:cocos2d::cocos2dVersion()];
-    [Bugsnag startBugsnagWithApiKey:@"BUGSNAG_API_KEY"];
+    BugsnagConfiguration *config = [BugsnagConfiguration new];
+    config.apiKey = @"BUGSNAG_API_KEY";
+    config.shouldAutoCaptureSessions = NO;
+    // [config setEndpointsForNotify:@"http://192.168.3.6:62000" sessions:@"http://192.168.3.6:62000"];
+    [Bugsnag startBugsnagWithConfiguration:config];
     AppDelegate app;
     return Application::getInstance()->run();
 }

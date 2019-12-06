@@ -30,6 +30,7 @@ import android.os.Build;
 import android.view.WindowManager;
 import android.view.WindowManager.LayoutParams;
 import com.bugsnag.android.Bugsnag;
+import com.bugsnag.android.Configuration;
 import com.bugsnag.android.BugsnagCocos2dxPlugin;
 
 public class AppActivity extends Cocos2dxActivity {
@@ -47,7 +48,11 @@ public class AppActivity extends Cocos2dxActivity {
             return;
         }
         BugsnagCocos2dxPlugin.register();
-        Bugsnag.init(this);
+        Configuration config = new Configuration("BUGSNAG_API_KEY");
+        config.setDetectAnrs(true);
+        config.setAutoCaptureSessions(true);
+//        config.setEndpoints("http://192.168.3.6:62000", "http://192.168.3.6:62000/sessions");
+        Bugsnag.init(this, config);
         // Make sure we're running on Pie or higher to change cutout mode
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.P) {
             // Enable rendering into the cutout area

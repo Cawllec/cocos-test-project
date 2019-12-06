@@ -44,7 +44,11 @@ static AppDelegate s_sharedApplication;
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     
     [BugsnagCocos2dxPlugin registerWithCocos2dVersion:cocos2d::cocos2dVersion()];
-    [Bugsnag startBugsnagWithApiKey:@"BUGSNAG_API_KEY"];
+    BugsnagConfiguration *config = [BugsnagConfiguration new];
+    config.apiKey = @"BUGSNAG_API_KEY";
+    config.shouldAutoCaptureSessions = YES;
+    // [config setEndpointsForNotify:@"http://192.168.3.6:62000" sessions:@"http://192.168.3.6:62000"];
+    [Bugsnag startBugsnagWithConfiguration:config];
     
     cocos2d::Application *app = cocos2d::Application::getInstance();
     

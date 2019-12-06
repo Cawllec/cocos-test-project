@@ -51,6 +51,15 @@ public:
 
     // Create a manual user
     void createUser();
+    
+    // Pauses the current session
+    void pauseSession();
+    
+    // Resumes a currently paused session
+    void resumeSession();
+    
+    // Starts a new session
+    void startSession();
 
     // implement the "static create()" method manually
     CREATE_FUNC(CrashyScene);
