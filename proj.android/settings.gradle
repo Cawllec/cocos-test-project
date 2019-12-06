@@ -1,0 +1,6 @@
+include ':bugsnag-cocos2dx'
+project(':bugsnag-cocos2dx').projectDir = new File(settingsDir, '../bugsnag/android/bugsnag-plugin-android-cocos2dx')
+include ':libcocos2dx'
+project(':libcocos2dx').projectDir = new File(settingsDir, '../cocos2d/cocos/platform/android/libcocos2dx')
+include ':parky2'
+project(':parky2').projectDir = new File(settingsDir, 'app')
